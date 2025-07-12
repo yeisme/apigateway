@@ -1,0 +1,31 @@
+log:
+  level: INFO
+
+providers:
+  docker:
+    watch: true
+    exposedByDefault: false
+
+api:
+  insecure: true
+  dashboard: true
+
+entryPoints:
+  web:
+    address: ":80"
+  websecure:
+    address: ":443"
+
+metrics:
+  prometheus:
+    addEntryPointsLabels: true
+    addServicesLabels: true
+    buckets:
+      - 0.1
+      - 0.3
+      - 1.2
+      - 5.0
+
+accessLog:
+  filePath: "/var/log/traefik/access.log"
+  bufferingSize: 100

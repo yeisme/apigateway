@@ -5,5 +5,6 @@ apigateway 负责管理 API 网关的配置和路由规则，apigateway 服务�
 ```txt
 X-User-ID: 12345
 X-User-Name: alice
+X-User-Email: alice@example.com
 X-User-Roles: admin,reader
 ```
